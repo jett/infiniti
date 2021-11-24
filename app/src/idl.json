@@ -8,11 +8,11 @@
         {
           "name": "voteAccount",
           "isMut": true,
-          "isSigner": true
+          "isSigner": false
         },
         {
           "name": "user",
-          "isMut": true,
+          "isMut": false,
           "isSigner": true
         },
         {
@@ -21,7 +21,12 @@
           "isSigner": false
         }
       ],
-      "args": []
+      "args": [
+        {
+          "name": "voteAccountBump",
+          "type": "u8"
+        }
+      ]
     },
     {
       "name": "voteCrunchy",
@@ -48,7 +53,7 @@
   ],
   "accounts": [
     {
-      "name": "VoteAccount",
+      "name": "VotingState",
       "type": {
         "kind": "struct",
         "fields": [
@@ -59,12 +64,16 @@
           {
             "name": "smooth",
             "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
           }
         ]
       }
     }
   ],
   "metadata": {
-    "address": "GGVgsdRfziTtDgMtAjA1GTRMZEdTzobrDNV5WXirwFq4"
+    "address": "A4XDsSnZot6fvPCi8rUQunTXaxXXhFsrrAC4W9B9uscs"
   }
 }
